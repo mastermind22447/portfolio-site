@@ -1,0 +1,126 @@
+{% extends 'base/main.html' %} {% block content %} {% load static %}
+<div class="row">
+  <img src="{% static "portfolio/media/Background_V02.png" %}" class="img-fluid"
+  alt="Responsive image" />
+</div>
+
+<dive class="row">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="40"
+    height="40"
+    fill="currentColor"
+    class="bi bi-chevron-compact-down"
+    viewBox="0 0 16 16"
+  >
+    <path
+      fill-rule="evenodd"
+      d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"
+    />
+  </svg>
+</dive>
+
+<div class="row">
+  <img src="{% static "portfolio/media/EmbeddedImage.png" %}" class="img-fluid"
+  alt="..." />
+</div>
+<div class="container text-center">
+  <h1>SELECTED WORK</h1>
+
+  <div class="placeholder col-4">
+    <div class="card">
+      <img src="{% static "portfolio/media/card01.jpg" %}" class="card-img-top"
+      alt="..." />
+
+      <div class="card-body">
+        <h5 class="card-title">Name of presentation</h5>
+        <p class="card-text">
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </p>
+        <a href="#" class="btn btn-primary">Go to presentation</a>
+      </div>
+    </div>
+  </div>
+  <div class="placeholder col-4">
+    <div class="card">
+      <img src="{% static "portfolio/media/card01.jpg" %}" class="card-img-top"
+      alt="..." />
+
+      <div class="card-body">
+        <h5 class="card-title">Name of project</h5>
+        <p class="card-text">
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </p>
+        <a href="#" class="btn btn-primary">Go to project</a>
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+<div class="container" style="width: 35rem">
+  <div
+    id="carouselExampleIndicators"
+    class="carousel slide"
+    data-bs-ride="carousel"
+  >
+    <div class="carousel-indicators">
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="0"
+        class="active"
+        aria-current="true"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="1"
+        aria-label="Slide 2"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="2"
+        aria-label="Slide 3"
+      ></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static "portfolio/media/IMG_6058.JPG" %}" class="d-block
+        w-100" alt="..." />
+      </div>
+      <div class="carousel-item">
+        <img src="{% static "portfolio/media/IMG_6053.JPG" %}" class="d-block
+        w-100" alt="..." />
+      </div>
+      <div class="carousel-item">
+        <img src="{% static "portfolio/media/IMG_6059.JPG" %}"
+        class="d-blockw-100" alt="..." />
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
+{% endblock content %}
