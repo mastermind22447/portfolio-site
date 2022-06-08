@@ -1,4 +1,4 @@
-{% extends 'base/main.html' %} {% block content %} {% load static %}
+{% extends 'base/base.html' %} {% block content %} {% load static %}
 <div class="row">
   <img src="{% static "portfolio/media/Background_V02.png" %}" class="img-fluid"
   alt="Responsive image" />
@@ -24,6 +24,23 @@
   <img src="{% static "portfolio/media/EmbeddedImage.png" %}" class="img-fluid"
   alt="..." />
 </div>
+{% comment %} projects {% endcomment %}
+<div class="container">
+  <table class="table table table-bordered" id="post">
+    <tbody>
+      {% for category in categories %}
+      <tr>
+        <th class="text-center">{{ forloop.counter }}</th>
+        <td class="text-center">
+          <a href="http://127.0.0.1:8000/{{category}}">{{category}}</a>
+        </td>
+
+        {% endfor%}
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 <div class="container text-center">
   <h1>SELECTED WORK</h1>
 
