@@ -1,3 +1,19 @@
 {% extends 'base/base.html' %} {%block content%}
-<h1>Coding Template</h1>
+<h1 class="text-center">Coding Template</h1>
+<br />
+<br />
+<div class="container">
+  <table class="table table table-bordered" id="post">
+    <tbody>
+      {% for post in posts %}
+      <tr>
+        <th class="text-center">{{ forloop.counter }}</th>
+        <td class="text-center">{{post}}</td>
+        <td class="text-center">{{post.category}}</td>
+
+        {% endfor%}
+      </tr>
+    </tbody>
+  </table>
+</div>
 {%endblock content%}

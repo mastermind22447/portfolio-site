@@ -32,7 +32,9 @@
       <tr>
         <th class="text-center">{{ forloop.counter }}</th>
         <td class="text-center">
-          <a href="http://127.0.0.1:8000/{{category}}">{{category}}</a>
+          <a href="http://127.0.0.1:8000/category/{{category.id}}"
+            >{{category}}</a
+          >
         </td>
 
         {% endfor%}
