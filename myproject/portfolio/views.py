@@ -21,7 +21,9 @@ def home(request):
 
     return HttpResponse(template.render(context, request))
 
-def category(request, category_id):
+
+
+def projects(request, category_id):
     posts = Post.objects.filter(category_id=category_id).order_by('id')
     category = Category.objects.get(id=category_id)
 
@@ -29,37 +31,20 @@ def category(request, category_id):
         'posts' : posts,
         'category': category,
     }
-
+    
     template = loader.get_template('base/projects.html')
-    return HttpResponse(template.render(context, request))
-    # if category_id == 2:
-    #     template = loader.get_template('base/projects.html')
-    #     return HttpResponse(template.render(context, request))
-   
-    # else:
-    #     template = loader.get_template('base/coding.html')
-    #     return HttpResponse(template.render(context, request))
-  
 
-
-def projects(request):
-    post = Post.objects.all
-    template = loader.get_template()
-    
-    context = {
-        'posts' : post,
-    }
-
-    
+    print ("-----------")
     return HttpResponse(template.render(context, request))
 
 
 
 def project(request):
-    return render(request,'base/project.html')
+    return render(request,'base/architecture.html')
+
+def coding(request):
+    return render(request,'base/coding.html')
 
 def about(request):
     return render(request,'base/about.html')
 
-def coding(request):
-    return render(request,'base/coding.html')
