@@ -15,8 +15,8 @@ def home(request):
     context = {
         'categories' : category,
     }
-    print ("-----------")
-    print (category)
+    # print ("-----------")
+    # print (category)
     
 
     return HttpResponse(template.render(context, request))
@@ -34,12 +34,14 @@ def projects(request, category_id):
     
     template = loader.get_template('base/projects.html')
 
-    print ("-----------")
+    # print ("-----------")
+    # print (category)
     return HttpResponse(template.render(context, request))
 
 
 
-def project(request):
+def architecture(request):
+
     return render(request,'base/architecture.html')
 
 def coding(request):
